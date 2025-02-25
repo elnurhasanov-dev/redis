@@ -1,0 +1,38 @@
+databaseChangeLog:
+  - changeSet:
+      id: Create customer table
+      author: Elnur Hasanov
+      changes:
+        - createTable:
+            tableName: customers
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: first_name
+                  type: varchar(32)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: last_name
+                  type: varchar(32)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: age
+                  type: int
+              - column:
+                  name: email
+                  type: varchar(32)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: phone
+                  type: varchar(32)
+
+            remarks: Table to store information about customers

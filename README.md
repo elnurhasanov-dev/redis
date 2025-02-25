@@ -21,5 +21,17 @@ The project uses PostgreSQL for database operations and focuses on Redis integra
    cd your-repo
    
 2. **Start container**
-      ```bash
+   ```bash
    docker-compose up -d
+
+##  Viewing Data with Redis CLI 
+
+If you are running Redis with Docker, you can view the data in Redis using the following commands:
+
+1. Enter the Redis container:
+   ```bash
+   docker exec -it <redis_container> redis-cli
+   
+2. View all keys in the cache:
+   ```bash
+   keys *
